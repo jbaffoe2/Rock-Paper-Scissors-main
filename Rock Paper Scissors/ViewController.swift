@@ -73,8 +73,16 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
-        let nvc = segue.identifier as! viewTwo
-    }
+        let nvc = segue.destination as! viewTwo
+        
+        if segue.identifier == "mySegue" {
+             nvc.receivingInteger = choiceAsInteger
+            
+            
+            
+        }
+  }
+    
     
     @IBOutlet var sellectImage: [UIImageView]!
     
