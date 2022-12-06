@@ -12,8 +12,9 @@ class viewTwo: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         // Do any additional setup after loading the view.
-        intOnethroughThree = Int.random(in: 1...3)
+        intOnethroughThree = Int.random(in: 0...2)
         declareWinner(ourChoice: receivingInteger, cpuChoice: intOnethroughThree)
     }
     
@@ -21,7 +22,7 @@ class viewTwo: UIViewController {
     var receivingString = ""
     var receivingInteger = 0
     
-    var intOnethroughThree = Int.random(in: 1...3)
+    var intOnethroughThree = Int.random(in: 0...2)
     
     @IBOutlet weak var playerImage: UIImageView!
     
@@ -33,64 +34,168 @@ class viewTwo: UIViewController {
         if receivingInteger == 0 && intOnethroughThree == 1 {
             loser1.text = "Loser"
         }
-      
-        else if receivingInteger == 1 && intOnethroughThree == 2 {
+        
+        else if ourChoice == 1 && cpuChoice == 2 {
             loser1.text = "Loser" }
-       
-       else if receivingInteger == 2 && intOnethroughThree == 0 {
+        
+        else if ourChoice == 2 && cpuChoice == 0 {
             loser1.text = "loser"}
         
-       else if receivingInteger == 0 && intOnethroughThree == 0 {
+        else if ourChoice == 0 && cpuChoice == 0 {
             loser1.text = "Tie"
         }
-       else if receivingInteger == 1 && intOnethroughThree == 1 {
+        else if ourChoice == 1 && cpuChoice == 1 {
             loser1.text = "Tie"
         }
-       else if receivingInteger == 2 && intOnethroughThree == 2 {
+        else if ourChoice == 2 && cpuChoice == 2 {
             loser1.text = "Tie"
         }
-       else if receivingInteger == 0 && intOnethroughThree == 2 {
+        else if ourChoice == 0 && cpuChoice == 2 {
             loser1.text = "Winner"
         }
-       else if receivingInteger == 1 && intOnethroughThree == 0 {
+        else if ourChoice == 1 && cpuChoice == 0 {
             loser1.text = "Winner"
         }
-        else if receivingInteger == 2 && intOnethroughThree == 1 {
+        else if ourChoice == 2 && cpuChoice == 1 {
             loser1.text = "Winner"
             
         }
         
-        if receivingInteger == 0 {
-           playerImage.image = UIImage(named:"Rok")
-       }
-       
-        else if receivingInteger == 1 {
+        if ourChoice == 0 {
+            playerImage.image = UIImage(named:"Rock")
+        }
+        
+        else if ourChoice == 1 {
             playerImage.image = UIImage(named:"paper")
         }
-            
-        else if receivingInteger == 2 {
+        
+        else if ourChoice == 2 {
             playerImage.image = UIImage(named:"scissors")
         }
-            
-        if receivingInteger == 0{
-            computerImage1.image = UIImage(named:"Rok")
+        
+        if cpuChoice == 0 {
+            computerImage1.image = UIImage(named:"Rock")
         }
-        else if receivingInteger == 1 {
+        else if cpuChoice == 1 {
             computerImage1.image = UIImage(named:"paper")
         }
-        else if receivingInteger == 2 {
+        else if cpuChoice == 2 {
             computerImage1.image = UIImage(named:"scissors")
         }
-        }
-        /*
-         // MARK: - Navigation
-         
-         // In a storyboard-based application, you will often want to do a little preparation before navigation
-         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         // Pass the selected object to the new view controller.
-         }
-         */
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}
+        
+    
 
